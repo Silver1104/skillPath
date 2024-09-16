@@ -1,4 +1,3 @@
-import React from 'react';
 import { Authenticated, Unauthenticated, useQuery } from 'convex/react';
 import { SignIn, SignInWithEmail, SignOut } from './components/AuthComponents';
 import { api } from '../convex/_generated/api';

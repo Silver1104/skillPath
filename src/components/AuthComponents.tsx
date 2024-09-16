@@ -1,7 +1,7 @@
-import React from 'react';
+
 import { useAuthActions } from '@convex-dev/auth/react';
-import { Button } from './/ui/button';
-import { Input } from './/ui/input';
+import { Button } from './ui/button';
+import { Input } from './ui/input';
 import '../css/AuthComponents.css';
 export function SignIn() {
   const { signIn } = useAuthActions();
