@@ -1,16 +1,18 @@
-
+// src/components/AuthComponents.tsx
+import React from 'react';
 import { useAuthActions } from '@convex-dev/auth/react';
 import { Button } from './ui/button';
 import { Input } from './ui/input';
 import '../css/AuthComponents.css';
-export function SignIn() {
+
+export const SignIn: React.FC = () => {
   const { signIn } = useAuthActions();
   return (
     <Button onClick={() => void signIn('github')}>Sign in with GitHub</Button>
   );
-}
+};
 
-export function SignInWithEmail() {
+export const SignInWithEmail: React.FC = () => {
   const { signIn } = useAuthActions();
   return (
     <form
@@ -24,9 +26,9 @@ export function SignInWithEmail() {
       <Button type="submit">Send sign-in link</Button>
     </form>
   );
-}
+};
 
-export function SignOut() {
+export const SignOut: React.FC = () => {
   const { signOut } = useAuthActions();
   return <Button onClick={() => void signOut()}>Sign out</Button>;
-}
+};

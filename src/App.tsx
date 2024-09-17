@@ -1,5 +1,7 @@
+import React from 'react';
 import { Authenticated, Unauthenticated, useQuery } from 'convex/react';
-import { SignIn, SignInWithEmail, SignOut } from './components/AuthComponents';
+import { SignIn, SignInWithEmail } from './components/AuthComponents';
+import Dashboard from './components/Dashboard';
 import { api } from '../convex/_generated/api';
 import './css/App.css';
 
@@ -17,10 +19,11 @@ export default function App() {
       </Unauthenticated>
       
       <Authenticated>
-        <div className="homepage-container">
-          <h1>Welcome, {viewer?.name}</h1>
-          <SignOut />
-        </div>
+        {viewer ? (
+          <Dashboard username={viewer.name ?? 'User'} />
+        ) : (
+          <div>Loading...</div>
+        )}
       </Authenticated>
     </>
   );

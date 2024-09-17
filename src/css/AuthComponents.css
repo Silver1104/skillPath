@@ -1,60 +1,72 @@
-/* Button styles */
-button {
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
-    color: #fff;
-    background-color: #007bff;
-    cursor: pointer;
-    transition: background-color 0.3s;
-  }
-  
-  button:hover {
-    background-color: #0056b3;
-  }
-  
-  /* Form container */
-  form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 10px; /* Space between elements */
-    margin-top: 20px;
-  }
-  
-  /* Input styles */
-  input {
-    padding: 10px;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    width: 100%;
-    max-width: 300px; /* Limiting the width of input fields */
-  }
-  
-  input::placeholder {
-    color: #888;
-  }
-  
-  /* Specific styles for SignIn and SignInWithEmail components */
-  .signin-container,
-  .signin-with-email-container {
+/* src/css/AuthComponents.css */
+
+/* General Container Styles */
+.signin-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    height: 100vh;
+    background-color: #f4f4f9; /* Light background color */
+    color: #333; /* Dark text color */
     padding: 20px;
-    margin: 20px;
   }
   
-  .signin-container h2,
-  .signin-with-email-container h2 {
+  h2 {
+    color: #333; /* Dark text color */
     margin-bottom: 20px;
-    font-size: 1.5rem;
-    color: #333;
+    font-size: 24px;
+    font-weight: 600;
+  }
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: #ffffff; /* White background for the form */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px; /* Max width for better readability on larger screens */
+  }
+  
+  /* Input Styles */
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd; /* Light border color */
+    border-radius: 4px;
+    background-color: #fafafa; /* Light background for inputs */
+    color: #333; /* Dark text color */
+    font-size: 16px;
+  }
+  
+  /* Button Styles */
+  button {
+    background-color: #007bff; /* Primary button color */
+    color: #ffffff; /* Button text color */
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Button SignOut Specific Styles */
+  button.sign-out {
+    background-color: #dc3545; /* Sign out button color */
+  }
+  
+  button.sign-out:hover {
+    background-color: #c82333; /* Darker shade on hover */
   }
   
