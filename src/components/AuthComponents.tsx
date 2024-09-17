@@ -1,17 +1,32 @@
 // src/components/AuthComponents.tsx
 import React from 'react';
 import { useAuthActions } from '@convex-dev/auth/react';
-import { Button } from './ui/button';
-import { Input } from './ui/input';
 import '../css/AuthComponents.css';
+
+// Import your logo images
+import githubLogo from '../assets/github-logo.png'; // Update the path as necessary
+import googleLogo from '../assets/google-logo.png'; // Update the path as necessary
+import { Input } from './ui/input';
+import { Button } from './ui/button';
 
 export const SignIn: React.FC = () => {
   const { signIn } = useAuthActions();
+
   return (
-    <>
-      <Button onClick={() => void signIn('github')}>Sign in with GitHub</Button>
-      <Button onClick={() => void signIn('google')}>Sign in with Google</Button>
-    </>
+    <div className="auth-buttons-container">
+      <img
+        src={githubLogo}
+        alt="Sign in with GitHub"
+        className="auth-github-logo"
+        onClick={() => void signIn('github')}
+      />
+      <img
+        src={googleLogo}
+        alt="Sign in with Google"
+        className="auth-google-logo"
+        onClick={() => void signIn('google')}
+      />
+    </div>
   );
 };
 
