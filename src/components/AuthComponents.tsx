@@ -8,7 +8,10 @@ import '../css/AuthComponents.css';
 export const SignIn: React.FC = () => {
   const { signIn } = useAuthActions();
   return (
-    <Button onClick={() => void signIn('github')}>Sign in with GitHub</Button>
+    <>
+      <Button onClick={() => void signIn('github')}>Sign in with GitHub</Button>
+      <Button onClick={() => void signIn('google')}>Sign in with Google</Button>
+    </>
   );
 };
 
