@@ -1,4 +1,3 @@
-import React from 'react';
 import { Authenticated, Unauthenticated, useQuery } from 'convex/react';
 import { SignIn, SignInWithEmail } from './components/AuthComponents';
 import Dashboard from './components/Dashboard';
