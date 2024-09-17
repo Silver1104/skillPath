@@ -5,6 +5,7 @@ import { ConvexReactClient } from 'convex/react';
 import { ConvexAuthProvider } from '@convex-dev/auth/react';
 import './index.css';
 
+
 // Ensure the VITE_CONVEX_URL environment variable is defined
 const convexUrl = import.meta.env.VITE_CONVEX_URL;
 if (!convexUrl || !convexUrl.startsWith('https://')) {
